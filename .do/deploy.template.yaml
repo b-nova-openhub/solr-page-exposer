@@ -1,0 +1,7 @@
+spec:
+  name: sopagex
+  services:
+    - name: sopagex-service
+      git:
+        branch: main
+        repo_clone_url: https://github.com/b-nova-openhub/solr-page-exposer.git

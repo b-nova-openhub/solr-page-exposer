@@ -17,5 +17,4 @@ func main() {
 	}
 
 	solr.AddValuesToSolr(myList)
-
 }
