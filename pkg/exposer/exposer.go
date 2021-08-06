@@ -17,7 +17,8 @@ func SyncWithSolr(solrUrl string, sources []string) *Exposing {
 	pages := resolver.GetAllStatisPages(sources)
 	fmt.Println(pages)
 
-	//solr.GetAll()
+	solrDocs := solr.GetAllSolrDocs(solrUrl, "blogCore")
+	fmt.Println(solrDocs)
 
 	myList := map[string]string{
 		"keywords":    "testKeyword",

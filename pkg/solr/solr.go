@@ -1,18 +1,16 @@
 package solr
 
 import (
-	"fmt"
 	"github.com/vanng822/go-solr/solr"
 )
 
-func GetAll() {
-	si, _ := solr.NewSolrInterface("http://localhost:8983/solr", "blogCore")
+func GetAllSolrDocs(solrUrl, solrCore string) []solr.Document {
+	si, _ := solr.NewSolrInterface(solrUrl, solrCore)
 	query := solr.NewQuery()
 	query.Q("*:*")
 	s := si.Search(query)
 	r, _ := s.Result(nil)
-	fmt.Println(r.Results.Docs)
-
+	return r.Results.Docs
 }
 
 func AddValuesToSolr(solrUrl string, blogContent map[string]string) {
