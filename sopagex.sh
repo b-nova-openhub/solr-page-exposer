@@ -2,4 +2,7 @@
 
 echo "$(<LICENSE)"
 
-./bin/sopagex
+# Configure your sopagex app below:
+PORT=8080
+
+./bin/sopagex serve --port=$PORT

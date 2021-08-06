@@ -1,25 +1,28 @@
-all: test vet fmt mod build run
+all: tidy build run
 
-test:
-	go test ./...
-
-vet:
-	go vet ./...
-
-fmt:
-	go list -f '{{.Dir}}' ./... | grep -v /vendor/ | xargs -L1 gofmt -l
-
-mod:
+init:
+	go mod download github.com/gorilla/mux
+	go mod download github.com/spf13/cobra
+	go mod download github.com/vanng822/go-solr
+	go fmt
 	go mod tidy
 	go mod vendor
+	mkdir bin
+	build
+	run
+
+tidy:
+	go mod tidy
+	go fmt ./...
 
 build:
-	go build -o bin/sopagex cmd/sopagex/main.go
+	go test ./...
+	go build -o bin/sopagex main.go
 
 run:
+	chmod +x bin/sopagex
 	chmod +x sopagex.sh
 	./sopagex.sh
 
 install:
-	mod
 	go install -v ./...
