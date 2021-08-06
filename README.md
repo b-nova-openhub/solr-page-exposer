@@ -1,4 +1,4 @@
-![sopagex-header](https://github.com/b-nova-openhub/jams-vanilla-content/raw/main/gosopagex-header.png)
+![sopagex-header](https://docs.google.com/drawings/d/e/2PACX-1vSptVhOI76XeIroN2Oh_r_1eMhWIVZINlEPb-vfUl50ku77X_n106R2Ujz9r8EJPlb52k1Msx7L2ihN/pub?w=962&h=330)
 
 # gosopagex (go-solr-page-exposer)
 
@@ -10,9 +10,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/b-nova-openhub/solr-page-exposer?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/b__nova?style=social)
 
-gosopagex is a `tool` that allows `content maintainers` to do `expose html content to the Apache Solr search platform`.
+**gosopagex is a tool that allows content maintainers to do expose html content to the Apache Solr search platform.**
 
-More specifically, gosopagex is microservice written in Go that maintains html files in a desired solr-friendly format and exposes them RESTful interface. It is operates on the principles of KISS and is best integrated in a JAMstack.
+More specifically, gosopagex is microservice written in Go that maintains html files in a desired solr-friendly format
+and exposes them RESTful interface. It is operates on the principles of KISS and is best integrated in a JAMstack.
 
 ## Prerequisites
 
@@ -52,8 +53,8 @@ This method is preferable as you're more flexible and don't have to retype the b
 
 ## Reading gosopagex's API
 
-Once gosopagex is running, it does clone the git repository, converts its markdown files to html pages and forwards
-them over a RESTful api. That api can be accessed over locally if the executable was run on your local
+Once gosopagex is running, it does clone the git repository, converts its markdown files to html pages and forwards them
+over a RESTful api. That api can be accessed over locally if the executable was run on your local
 machine (`http://localhost:8080`) or over a K8s service definition.
 
 ## Makefile
@@ -115,4 +116,3 @@ If you want to contact me you can reach me at [info@b-nova.com](info@b-nova.com)
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
 This project uses the following license: [MIT License](https://opensource.org/licenses/MIT)
-. https://opensource.org/licenses/MIT
