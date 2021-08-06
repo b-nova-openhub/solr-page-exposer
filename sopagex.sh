@@ -3,6 +3,8 @@
 echo "$(<LICENSE)"
 
 # Configure your sopagex app below:
-PORT=8080
+SOLR=
+SOURCE="http://localhost:8002/pages, http://localhost:8002/pages"
+PORT=8003
 
-./bin/sopagex serve --port=$PORT
+./bin/sopagex serve --solr=$SOLR --source=$SOURCE --port=$PORT
